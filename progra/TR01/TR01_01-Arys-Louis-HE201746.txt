@@ -1,0 +1,133 @@
+var heros = deadpool;
+résultat : erreur, l'identificateur deadpool n'a pas encore été instancié (Uncaught ReferenceError). assigne
+           la valeur "undefined" à 'heros'
+
+let heroine = "Wonder Woman";
+résultat : instanciation de la variable 'heroine' avec comme valeur "Wonder Woman"
+
+let choix;
+résultat : instanciation de la variable 'choix' avec comme valeur "undefined"
+
+console.log(heroine);
+résultat : affiche sur la console la valeur de la variable 'heroine' à savoir "Wonder Woman"
+
+console.log(choix);
+résultat : affiche sur la console la valeur de la variable 'choix' à savoir "undefined"
+
+console.log(heros);
+résultat : affiche dans la console la valeur de l'identificateur heros à savoir la valeur "undefined"
+
+console.log(rien);
+résultat : erreur, la fonction essaye d'appeler l'identificateur nommer 'rien',
+           mais celui-ci n'a pas encore été défini (Uncaught ReferenceError)
+
+choix = heroine;
+résultat : change la valeur contenue dans la variable 'choix' par la valeur contenue dans la variable
+           'heroine' à savoir "Wonder Woman"
+
+héros = "deadpool"; // à éviter
+résultat : instancie la variable 'héros' avec la valeur "deadpool".  Par contre le nom de l'identificateur est
+           est à éviter car les accents peuvent ne pas être tolérer par le language de programmation utilisé
+
+console.log(choix);
+résultat : affiche sur la console la nouvelle valeur de la variable choix, à savoir "Wonder Woman"
+
+let resultat = 3 ** 2;
+résultat : instancie la variable 'resultat' avec comme valeur 3 puissance 2 à savoir 9
+
+console.log(resultat);
+résultat : affiche sur la console la valeur contenue dans la variable 'resultat' à savoir 9
+
+console.log(typeof resultat);
+résultat : affiche sur la console le retour de la fonction 'typeof', à savoir le type de la valeur contenue dans
+           la variable 'resultat' et qui est un "number".
+
+let temp = "2"
+résultat : instancie la variable temp avec comme valeur "2".
+
+console.log(resultat + 1);
+résultat : affiche sur la console la somme du number 9 et du number 1 à savoir 10
+
+console.log(resultat + choix);
+résultat : concatène le Number 9 et le String "Wonder Woman" en un nouveau String "9Wonder Woman"
+
+console.log(resultat + temp);
+résultat : concatène le Number 9 et le String "2" en un nouveau String "92"
+
+console.log(resultat + Number(temp));
+résultat : additionne le Number 9 et le Number 2, ce qui donne le number 11
+
+console.log(typeof (1 + "1"));
+résultat : Comme le number 1 est concaténé avec le String "1", la fonction typeof renvoie naturellement le
+           type 'String'
+
+console.log(Number(1 + "1"));
+résultat : il y a d'abord la concaténation du number 1 et du String "1" qui donne le String "11", ensuite
+           la fonction 'Number' effectue le cast de "11" en 11
+
+console.log(Number(resultat + choix));
+résultat : il y a d'abord la concaténation du number 9 (resultat) et du String "Wonder Woman" (choix)
+           qui donne le String "9Wonder Woman", ensuite la fonction 'Number' renvoye le number NotANumber(NaN)
+           car le String "9Wonder Woman" ne peut être convertis en number
+
+console.log(resultat - choix);
+résultat : affiche dans la console le number NotANumber, car l'opération number - String ne peut pas être
+           effectuée (le contenu de la varable 'choix' ne peut pas être convertis en number)
+
+console.log(String(333));
+résultat : affiche 333 dans la console (à savoir le String "333")
+
+console.log('l'agent a de l'argent');
+résultat : lance une "SyntaxError" car l'apostrophe de "l'agent" et de "l'argent" donne un problème de synthaxe
+
+console.log("l'agent a de l'argent");
+résultat : affiche correctement la phrase "l'agent à de l'argent" dans la console
+
+console.log('l\'agent a de l\'argent');
+résultat : affiche correctement la phrase "l'argent à de l'argent" dans la console car le problème des
+           accents a été réglé grâce aux '\'
+
+let message = "Quel est votre nombre favori?";
+résultat : initialise la variable 'message' avec comme valeur le String "Quel est votre nombre favori?"
+
+reponse = prompt(message);
+résultat : initialise la variable 'reponse' avec comme valeur ce que l'utilisateur va mettre dans un pop-up
+           sur lequel est écrit "Quel est votre nombre favori?"
+
+console.log(reponse);
+résultat : affiche sur la console la valeur contenue dans 'reponse', à savoir ce que l'utilisateur à rentrer
+           dans le précédent pop-up
+
+console.log(typeof reponse);
+résultat : affiche dans la console le type de la valeur contenue dans la variable 'reponse', à savoir 'String'
+
+reponse = +prompt(message);
+résultat : change la valeur contenue dans reponse par la nouvelle valeur rentrée par l'utilisateur castée cette
+           fois en number.
+
+console.log(typeof reponse);
+résultat : affiche dans la console la valeur contenue dans la variable 'reponse' à savoir number.
+
+reponse = 1,5; // attention!
+résultat : atttribue la valeur 1 à la variable 'reponse' et affiche 5 dans la console
+
+console.log(reponse);
+résultat : affiche la valeur contenue dans la variable 'reponse', à savoir 1
+
+reponse = 1.5;
+résultat : attribue la valeur 1.5 à la variable 'reponse'
+
+console.log(reponse);
+résultat : affiche dans la console la valeur stockée dans la variable 'reponse', à savoir 1.5
+
+console.log(typeof reponse);
+résultat : affiche dans la console le type de la valeur stockée dans la variable 'reponse', à savoir
+           number
+
+console.log(reponse.toFixed(2));
+résulat : affiche dans la console la valeur stockée dans la variable 'reponse', mais limitée à ses
+          deux premières décimales, à savoir 1.50
+
+console.log(typeof reponse.toFixed(2));
+résultat : affiche dans la console le type de la valeur retournée pour la méthode toFixed(), à savoir
+           String
