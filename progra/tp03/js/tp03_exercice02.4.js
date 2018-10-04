@@ -11,7 +11,7 @@ function forLoopThreeMax(){
 
 function whileChecking(){
 	let retour = "";
-	while(retour == "" || isNaN(Number(retour)) || Number(retour) < 0 || Number(retour) > 99){
+	while(retour == "" || isNaN(Number(retour))){
 		retour = prompt("Veuillez introduire un nombre");
 		}
 	return Number(retour);
