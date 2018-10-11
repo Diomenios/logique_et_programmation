@@ -1,5 +1,3 @@
 // TODO:
 
-* tester l'exercice 2.5 du tp03
-
-Coucou François tu veux un bisous ?
+* tester les exercices 2 et 3 du tp04
