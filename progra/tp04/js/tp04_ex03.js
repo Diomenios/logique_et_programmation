@@ -1,6 +1,9 @@
-/**************************  exercice 3.1a ************************************/
-
 "use strict";
+
+let scores = [4444, 3333, 5555, 1111, 9999, 7777, 8888];
+let nains = ["prof", "grincheux", "simplet", "joyeux", "rageux", "geek", "timide"];
+
+/**************************  exercice 3.1a ************************************/
 
 function scoreMax(array){
 
