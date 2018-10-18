@@ -114,33 +114,20 @@ function afficherMaxPizzas(nombreSemaines){
 				formatWord("semaine", nombreSemaines) + " est " + compterTotalPizzas() + ".");
 	}
 	else{
-		let arrayAcc = [] ;
+		let sum = 0;
 		for(let i = 0 ; i< nombreSemaines ; i ++){
-			arrayAcc.push(pizzas[i]);
+			sum += pizzas[i]
 		}
-		let max = returnSumArray(arrayAcc);
+		let max = sum;
 		for(let i = nombreSemaines ; i < pizzas.length ; i++){
-			let returnNumber;
-			arrayAcc.shift();
-			arrayAcc.push(pizzas[i]);
-			
-			returnNumber = returnSumArray(arrayAcc);
-			
-			if(returnNumber > max ){
-				max = returnNumber;
+			sum += pizzas[i] - pizza[i-nombreSemaines];
+			if(sum > max ){
+				max = sum;
 			}
 		}
 		console.log("Le plus grand nombre de pizza mangées sur " + nombreSemaines + " " + formatWord("dernière", nombreSemaines) + " " + 
 				formatWord("semaine", nombreSemaines) + " est "  + max + ".");
 	}
-}
-
-function returnSumArray(array){
-	let acc = 0 ;
-	for(let i = 0 ; i < array.length ; i++){
-		acc += array[i];
-	}
-	return acc ;
 }
 
 function verifPrompt(){
