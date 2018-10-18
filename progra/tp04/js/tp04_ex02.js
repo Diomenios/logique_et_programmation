@@ -67,5 +67,41 @@ let survivors = ["1TM1", "1TM2", "1TL1", "1TL2"];
 console.log( supprimerTroisDerniers(survivors) );
 }
 
+/**
+ * Fonction qui reçoit normalement un array en paramètre, qui suppriment ses trois derniers éléments
+ * et qui retourne ce tableau.
+ * Le tableau original reçu en paramètre peut être modifié.
+ * Si le paramètre reçu n'est pas un array, la fonction ne fait rien et retourne simplement le paramètre reçu.
+ * Si l'array reçu comporte moins de 3 éléments, la fonction enlève tous les éléments de l'array.
+ *
+ * @example
+ * // returns ['a']
+ * supprimerTroisDerniers(['a', [2, 4, 5], true, 1]);
+ *
+ * @example
+ * // returns []
+ * supprimerTroisDerniers(['a', 1]);
+ *
+ * @example
+ * // returns 'a'
+ * supprimerTroisDerniers('a');
+ *
+ * @param {*} tableau - array dont on désire supprimer les trois derniers éléments, quels que soient leur types
+ *
+ * @return {*} array reçu en paramètre sans ses trois derniers éléments.
+ *             Si l'array reçu en paramètre comporte moins de 3 éléments, il s'agit d'un tableau vide.
+ *             Si le paramètre n'est pas un array, il s'agit simplement du paramètre reçu non modifié.
+ */
+function supprimerTroisDerniersJsDoc(tableau) {
+    if(tableau.constructor !== Array){
+		
+	}
+	else if(tableau.length < 3){
+		
+	}
+	else{
+		
+	}
+}
 
 
