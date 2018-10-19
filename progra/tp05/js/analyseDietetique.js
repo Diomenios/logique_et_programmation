@@ -1,13 +1,57 @@
 "use strict";
 
+//initialisation des variables globales
 let pizzas = [];
 const LIMITE = 3;
 const POIDS_PIZZA = 0.25;
 
-function introduirePizzas(){	
+/***************************  fonctions auxiliaires *************************/
+
+/*
+*	Demande à l'utilisateur de rentrer un nombre de pizzas via un prompt.
+* Vérifie si l'entrée de l'utilisateur est valide.
+* Dans le cas d'une entrée non-valide, le prompt redemande à l'utilisateur de renter une valeur.
+*
+* @return {string} retour Retourne la valeur valide sous la forme d'un String.
+*/
+function verifPrompt(){
+	let retour = "";
+	while(retour == "" || isNaN(Number(retour)) || Number(retour)<0){
+		retour = prompt("Combien de pizzas avez-vous mangé cette semaine ? (pour quitter : tapez fin,"+
+		"pour supprimer le dernier ajout tapez : sup et pour réinitialiser votre compteur de pizzas : tapez reinit)");
+
+		if(retour == "fin" || retour == "sup" || retour == "reinit"){
+				break;
+		}
+	}
+	return retour;
+}
+
+/*
+* Fonction permettant d'adapter un mot au pluriel dans le cas nécessaire.
+*
+* @return {string} word Le mot mis au pluriel ou non en fonction de la condition.
+*/
+function formatWord(word, number){
+	if(number > 1){
+		return word+"s";
+	}
+	else{
+		return word;
+	}
+}
+
+/*************************** fonctions de l'exercice **************************/
+
+/*
+* Permet d'introduire une nouvelle valeur dans l'array globale pizzas via un prompt.
+* Vérifie que la valeur introduite est bien un chiffre positif et pas : un "" ou un
+* string ou un chiffre négatif.
+*/
+function introduirePizzas(){
 	while(true){
 		let retour = verifPrompt();
-		
+
 		if(retour == "fin"){
 			console.log("break time");
 				break;
@@ -22,14 +66,17 @@ function introduirePizzas(){
 		}
 		else{
 			console.log("push time");
-			pizzas.push(Number(retour));	
+			pizzas.push(Number(retour));
 		}
 	}
 }
 
+/*
+* Affiche en console le nombre de semaines encodées dans l'array pizzas.
+*/
 function afficherNombreSemaines(){
 	let nombreSemaines = pizzas.length;
-	console.log("Vous avez introduit des données pour " + nombreSemaines + " " + formatWord("semaine", nombreSemaines) + ".");	
+	console.log("Vous avez introduit des données pour " + nombreSemaines + " " + formatWord("semaine", nombreSemaines) + ".");
 }
 
 function afficherPizzasParSemaine(){
@@ -40,13 +87,13 @@ function afficherPizzasParSemaine(){
 
 function afficherMaximumPizzas(){
 	let max = pizzas[0];
-	
+
 	for(let i = 1 ; i < pizzas.length ; i++){
 		if(max < pizzas[i]){
 			max = pizzas[i];
 		}
 	}
-	
+
 	console.log("Le plus grand nombre de pizzas mangées en une semaine est : " + max + ".");
 }
 
@@ -78,7 +125,7 @@ function afficherDernieresPizzas(nombreSemaines){
 			}
 		}
 	}
-	console.log("Lors des " + nombreSemaines + " " + formatWord("dernière", nombreSemaines) + " " + 
+	console.log("Lors des " + nombreSemaines + " " + formatWord("dernière", nombreSemaines) + " " +
 				formatWord("semaine", nombreSemaines) +", vous avez mangé " + acc + " " + formatWord("pizza", acc) + ".");
 }
 
@@ -87,7 +134,7 @@ function compterTotalPizzas(){
 	for(let i = 0 ; i < pizzas.length ; i++){
 		acc += pizzas[i];
 	}
-	return acc; 
+	return acc;
 }
 
 function afficherPoidsPizzas(){
@@ -107,10 +154,10 @@ function afficherMoyennePizzas(){
 
 function afficherMaxPizzas(nombreSemaines){
 	if(nombreSemaines > pizzas.length || nombreSemaines < 1){
-		console.log("veuillez utiliser cette fonction avec un nombre valide (plus petit ou égal au nombre de semaines déjà introduites et plus grand que 0) !!");	
+		console.log("veuillez utiliser cette fonction avec un nombre valide (plus petit ou égal au nombre de semaines déjà introduites et plus grand que 0) !!");
 	}
 	else if(nombreSemaines == pizzas.length){
-		console.log("Le plus grand nombre de pizzas mangées sur " + nombreSemaines + " " + formatWord("dernière", nombreSemaines) + " " + 
+		console.log("Le plus grand nombre de pizzas mangées sur " + nombreSemaines + " " + formatWord("dernière", nombreSemaines) + " " +
 				formatWord("semaine", nombreSemaines) + " est " + compterTotalPizzas() + ".");
 	}
 	else{
@@ -125,29 +172,7 @@ function afficherMaxPizzas(nombreSemaines){
 				max = sum;
 			}
 		}
-		console.log("Le plus grand nombre de pizza mangées sur " + nombreSemaines + " " + formatWord("dernière", nombreSemaines) + " " + 
+		console.log("Le plus grand nombre de pizza mangées sur " + nombreSemaines + " " + formatWord("dernière", nombreSemaines) + " " +
 				formatWord("semaine", nombreSemaines) + " est "  + max + ".");
-	}
-}
-
-function verifPrompt(){
-	let retour = ""; 
-	while(retour == "" || isNaN(Number(retour)) || Number(retour)<0){
-		retour = prompt("Combien de pizzas avez-vous mangé cette semaine ? (pour quitter : tapez fin,"+
-		"pour supprimer le dernier ajout tapez : sup et pour réinitialiser votre compteur de pizzas : tapez reinit)");
-		
-		if(retour == "fin" || retour == "sup" || retour == "reinit"){
-				break;
-		}
-	}
-	return retour;
-}
-
-function formatWord(word, number){
-	if(number > 1){
-		return word+"s";
-	}
-	else{
-		return word;
 	}
 }
