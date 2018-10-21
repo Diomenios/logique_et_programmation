@@ -9,14 +9,33 @@ const CONSOMMATION = 0.06;
 * Si oui, lance la fonction passée en paramètre.
 * Si non, affiche une erreur en console.
 *
-* @param {function} fonction La fonction qu'on veut lancer si la condition est respectée
+* @param {function} fonction La fonction qu'on veut lancer si la condition est respectée.
 */
 function affichageError(fonction){
   if (kilometrages.length < 2) {
     console.log("veuillez rentrer au moins 2 valeurs de kilométrage dans le programme !");
+    return
   }
   else {
     fonction();
+  }
+}
+
+/*
+* Vérifie si le nombre de kilométrage est suffisamment grand.
+* Si oui, lance la fonction passée en paramètre avec le paramètre qu'on veut lui passer.
+* Si non, affiche une erreur en console.
+*
+* @param {function} fonction La fonction qu'on veut lancer si la condition est respectée.
+* @param {*} param le paramètre à passer à la fonction "fonction".
+*/
+function affichageErrorWithParameter(fonction, param){
+  if (kilometrages.length < 2) {
+    console.log("veuillez rentrer au moins 2 valeurs de kilométrage dans le programme !");
+    return
+  }
+  else {
+    fonction(param);
   }
 }
 
@@ -26,8 +45,8 @@ function affichageError(fonction){
 */
 function ajouterKilometrages(){
   let retour = prompt("veuillez introduire un kilométrage : ");
-  if (isNaN(Number(retour)) || retour == "" ) {
-    console.log("erreur, veuillez rentrer un kilométrage valide (sous forme de nombres) !");
+  if (isNaN(Number(retour)) || retour == "" || Number(retour) < 0) {
+    console.log("erreur, veuillez rentrer un kilométrage valide (sous forme de nombres plus grand ou égal à 0) !");
   }
   else if (kilometrages.length > 0 && kilometrages[kilometrages.length-1] > Number(retour)) {
     console.log("erreur, votre kilométrage doit être plus grand que le dernier rentré !!"+
@@ -51,14 +70,14 @@ function reinitialiserKilometrages(){
 }
 
 /*
-* Affiche le nombre d'enregistrements de kilométrages
+* Affiche le nombre d'enregistrements de kilométrages.
 */
 function afficherNombreEnregistrements(){
   console.log("Votre nombre d'enregistrement est de : " + kilometrages.length);
 }
 
 /*
-* Affiche le plus grand trajet effectué entre deux pleins
+* Affiche le plus grand trajet effectué entre deux pleins.
 */
 function afficherTrajetMax(){
   let max = kilometrages[1]-kilometrages[0];
@@ -72,7 +91,7 @@ function afficherTrajetMax(){
 }
 
 /*
-* Affiche la moyenne des trajets effectués entre deux pleins avec 2 chiffres décimaux
+* Affiche la moyenne des trajets effectués entre deux pleins avec 2 chiffres décimaux.
 */
 function afficherTrajetMoyen(){
   let acc = 0;
@@ -80,12 +99,12 @@ function afficherTrajetMoyen(){
     acc += kilometrages[i+1]-kilometrages[i];
   }
   console.log("Votre distance moyenne parcourue entre deux pleins est de : " +
-              (acc/kilometrages.length).toFixed(2));
+              (acc/(kilometrages.length-1)).toFixed(2));
 }
 
 /*
-* Affiche le total de litres d'essence utilisés depuis le début
-* des enregistrements, en tenant compte de la consommation
+* Affiche le total de litres d'essence utilisés depuis le début.
+* des enregistrements, en tenant compte de la consommation.
 */
 function afficherConsommation(){
   console.log("Votre consommation d'essence totale est de : " +
@@ -94,7 +113,7 @@ function afficherConsommation(){
 
 /*
 * Affiche le nombre de fois où un plein a été effectué alors que le kilométrage
-* parcouru était plus petit que (km) passé en paramètre
+* parcouru était plus petit que (km) passé en paramètre.
 */
 function afficherKilometrageInferieur(km){
   let acc = 0;

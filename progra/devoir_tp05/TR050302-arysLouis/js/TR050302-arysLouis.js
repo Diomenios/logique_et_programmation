@@ -1,5 +1,9 @@
 "use strict";
 
+//Classe : 1TM2
+
+//Groupe : Louis Arys, François Charlier,  Joseph Antoons, Alexandre Pauly, Michihilo Onizuka
+
 /*
 2 tableaux sont imposés, Tab X et Tab Y. La fonction  que vous devez créer
 compare ces 2 tableaux et renvoie un 3eme tableau indiquant à chaque position :
