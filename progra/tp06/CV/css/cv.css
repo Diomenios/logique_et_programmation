@@ -6,6 +6,10 @@ header{
   padding: 50px;
 }
 
+footer{
+  clear: both;
+}
+
 .caracteristique{
   box-sizing: border-box;
   float: right;
@@ -22,8 +26,34 @@ header{
   max-width: 25%;
 }
 
-footer{
+.boxBorderLeft{
+  float: right;
+  border: 10%;
+}
+
+.floatClear{
   clear: both;
+}
+
+.texteTransparent{
+  opacity: 0.7;
+  color: grey;
+}
+
+#spanColorBlue{
+  color: blue;
+}
+
+#spanColorRed{
+  color: red;
+}
+
+#spanColorOrange{
+  color: orange;
+}
+
+#spanColorGreen{
+  color: green;
 }
 
 #arys{
