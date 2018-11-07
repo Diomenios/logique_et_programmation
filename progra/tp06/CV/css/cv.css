@@ -1,0 +1,37 @@
+header{
+  background-color:  gray;
+  color: white;
+  text-align: center;
+  font-size: 100%;
+  padding: 50px;
+}
+
+.caracteristique{
+  box-sizing: border-box;
+  float: right;
+  margin: 0px;
+  max-width: 70%;
+  height: auto;
+}
+
+.infoComplementaires{
+  box-sizing: border-box;
+  margin: 0px;
+  float: left;
+  width: 30%;
+  max-width: 25%;
+}
+
+footer{
+  clear: both;
+}
+
+#arys{
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+#photo{
+  width: 100%;
+  height: auto;
+}
