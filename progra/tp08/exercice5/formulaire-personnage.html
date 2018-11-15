@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- lvd august 2017 -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TP08 - Logique et Programmation</title>
+    <script src="js/formulaire-personnage.js"></script>
+</head>
+</body>
+
+<form id="formulairePersonnage" action=# onSubmit='return ajouterPersonnage(this);'>
+    <fieldset>
+        <legend>Création de personnages</legend>
+        <!-- nom -->
+        <label for="nom">Nom : </label>
+        <input id="nom" name="nom" type="text" value="Toto" required> <br>
+        <!-- date -->
+        <label for="creation">Date de création : </label>
+        <input id="creation" name="creation" type="date" required> <br>
+        <!-- sexe -->
+        <input type="radio" name="genre" value="homme" required> Monsieur<br>
+        <input type="radio" name="genre" value="femme" required> Madame<br>
+        <!-- race -->
+        <label for="race">Race : </label>
+        <select id="race" name="race">
+            <option value="E">Elf</option>
+            <option value="H" selected>Humain</option>
+            <option value="N">Nain</option>
+            <option value="W">Wookiee</option>
+        </select><br>
+        <!-- age -->
+        <label for="age">Age  : </label>
+        <input id="age" name="age" type="number" min="20" max="115" step="1" required><br>
+        <!-- bouton -->
+        <input type="submit">
+    </fieldset>
+</form>
+
+<!-- zone d'affichage -->
+<div id="affichagePersonnages">
+    <p>Message : <span id="message"></span></p>
+</div>
+<!-- boutons -->
+<div id="boutonsPersonnages">
+    <button type="button" onclick="afficherPersonnages();">Afficher</button>
+    <button type="button" onclick="supprimerPersonnages();">Supprimer</button> <br>
+</div>
+</div>
+
+
+</body>
+</html>
