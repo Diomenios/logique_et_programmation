@@ -1,0 +1,66 @@
+/* Arys Louis HE201746 */
+html {
+    background-image: url("../images/fond2.jpg");
+}
+body  {
+    font-family: Verdana, tahoma, sans-serif;
+    font-size: 1em;
+    box-sizing : border-box;
+    min-width: 970px;
+}
+header, footer {
+    clear: both;
+    font-family: cursive;
+    background-color: lightgoldenrodyellow;
+    padding: 0.5%;
+}
+footer { font-size: 0.9em;
+    text-align: center;
+    margin-top: 0.5%    ;
+    width: 100%;
+}
+section {
+    border-radius: 5px;
+    box-shadow: 4px 4px grey;
+    box-sizing: border-box;
+    height: 275px;
+    max-width: 49%;
+    margin: 0.5%;
+    padding: 1%;
+    border: 1px solid black;
+    text-align: justify;
+    line-height: 150%;
+    overflow: auto;
+    background-color: ivory;
+}
+
+img{
+    float: left;
+    box-sizing: border-box;
+    width:7em;
+    height: auto;
+}
+h1 {
+    font-family: "Lucida Calligraphy";
+    color: dodgerblue;
+    text-decoration: underline;
+    font-size: 1.3em;
+    margin: 0px;
+    padding-bottom: 0.3em;
+}
+
+.sectionRight{
+    float: right;
+}
+
+.sectionLeft{
+    float: left;
+}
+
+#loremPiedPage{
+    box-sizing: border-box;
+    float: right;
+    max-height: 2.5em;
+    width: auto;
+    margin: 0px;
+}
