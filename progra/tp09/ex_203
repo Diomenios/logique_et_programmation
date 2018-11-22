@@ -1,0 +1,6 @@
+let film = {
+    titre : "Not another teen movie",
+    annee : 2002,
+    acteurs : ["Chyler Leigh", "Chris Evans", "Jaime Pressly", "Eric Christian Olsen", "Mia Kirshner"],
+    duree : "1h29"
+};
