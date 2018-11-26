@@ -4,8 +4,8 @@ let passages;
 
 function initialiserPage(){
   passages = {};
-  document.getElementsByTagName("section")[1].innerHTML += "<table><thead><th><td>Nom</td>"+
-  "<td>Derniers passages</td></th></thead><tbody id='passages'></tbody></table>";
+  document.getElementsByTagName("section")[1].innerHTML += "<table><thead><th>Nom</th>"+
+  "<th>Derniers passages</th></thead><tbody id='passages'></tbody></table>";
 }
 
 function genererTable(){

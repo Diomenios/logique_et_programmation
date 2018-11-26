@@ -1,0 +1,18 @@
+form{
+  margin-top: 20px;
+  margin: 20px;
+}
+
+table{
+  margin: 2%;
+  width: 46%;
+  border: 1px solid black;
+}
+
+td{
+  border: 1px solid black;
+}
+
+th{
+  border: 1px solid border-left: ;
+}
