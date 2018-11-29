@@ -1,9 +1,12 @@
 form{
+  box-sizing: border-box;
   margin-top: 20px;
   margin: 20px;
+  border: 1px solid black;
 }
 
 table{
+  box-sizing: border-box;
   margin: 2%;
   width: 46%;
   border: 1px solid black;

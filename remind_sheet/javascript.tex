@@ -157,4 +157,50 @@ Différentes fonctions peuvent être utilisées pour afficher une information à
 
 \section{Les formulaires :}
 
+Lorsqu'une fonction est appelée par un formulaire : exempleDeFonction(this); Il est possible de retrouver facilement les différents éléments contenu dans le formulaire à l'aide de leur nom :
+
+\begin{lstlisting}
+
+// imaginons le cas ou le formulaire contient un champs de texte appeler "text" et un boutton appele "button"
+function maFonction(formulaire){
+	//ci-dessous on recupere le texte contenu dans le champ de texte
+	let textIn = formulaire.text.value;
+	
+	//ci-dessous on stock dans une variable la reference au boutton 
+	let unBoutton = formulaire.button;
+	
+	//on utilise la valeur du champ de texte precedemment recuperee
+	console.log(textIn);
+}
+
+\end{lstlisting}
+
+Pour se représenter la manière dont on peut récupérer les éléments d'un formulaire, le plus facile est d'utiliser le principe de la DOM.
+
+Une autre manière d'accéder aux éléments de notre page HTML à l'aide du Javascript sera expliquée plus loin, car à ce moment-là on ira accéder à tous les éléments du document et non plus seulement à ceux du formulaire !
+
+\section{Les Arrays :}
+
+Les Arrays sont un type d'objet supporter par beaucoup de language.  En Javascript, ils sont fort utile car ce sont des objets dit \textit{iterable}.  Pour faire simple, un objet \textit{iterable} peut être parcouru de manière récursive.  Ce sont aussi des structure pouvant être parcourue à l'aide de l'instruction for ... of.  
+
+La raison pour laquelle j'ai fait une section sur les arrays est qu'ils possèdent un bon nombre de méthodes très intéressantes.  Par exemple il existe des méthodes natives (\texttt{build-in}) à Javascript permettant de trier une liste, de filtrer ses éléments, d'appliquer un traitement à tous ses éléments ...  Les intérêts principaux de ces fonctions sont : 
+
+\begin{itemize}
+\item \textbf{Premièrement :} un gain de temps car il ne faudra pas les réécrire par nous-même dans chaque nouveau programme que nous écrivons
+\item \textbf{Deuxièmement :} Généralement ce genre de méthodes sont optimisées pour être rapide et efficace.  Bien souvent elles seront meilleures que celles que vous écrirez.  Et parfois elles sont même écrites dans un language différent (de moins haut niveau), et donc plus rapide que le language Javascript.  
+\end{itemize}
+
+Il est donc primordiale d'utiliser ces méthodes dès que cela est possible ! Voici la liste des méthodes devant être connues :
+
+\begin{itemize}
+\item \texttt{push()}:
+\item \texttt{pop()}:
+\item \texttt{shift()}:
+\item \texttt{unshift()}:
+\item \texttt{sort()}:
+\item \texttt{filter()}:
+\item \texttt{forEach}:
+\item \texttt{map()}:
+\end{itemize}
+
 \end{document}
