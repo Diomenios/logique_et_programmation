@@ -1,0 +1,107 @@
+body{
+  box-sizing: border-box;
+  width: 650px;
+  min-height: auto;
+  border: double;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1em;
+}
+
+form{
+  background-color: whitesmoke;
+}
+
+fieldset{
+  border: dotted;
+  border-width: thin;
+  margin: 5px;
+}
+
+fieldset > legend{
+  border: dotted;
+  border-width: thin;
+}
+
+th{
+  font-style: italic;
+}
+
+td{
+  box-sizing: border-box;
+  margin: 0px;
+  border: dashed;
+  border-width: thin;
+}
+
+tfoot > tr > td{
+  text-align: right;
+  border: none;
+}
+
+legend{
+  display: block;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
+}
+
+.bodyTable{
+  border: double;
+  margin-bottom: 50px
+}
+
+.bodyTable tbody>tr>td:not(:first-child){
+  text-align: right;
+}
+
+.bodyTable tbody>tr>td:last-child{
+  color: blue;
+  font-weight: bold;
+}
+
+.thTable{
+  font-style: italic;
+}
+
+.clear{
+  clear: both;
+}
+
+.grayBrackground{
+  background-color:  lightgray;
+  margin: 5px;
+  padding: 20px;
+  border: double;
+}
+
+.smallCaracter{
+  font-size: 10pt;
+  font-weight: lighter;
+}
+
+#fieldRight{
+  box-sizing: border-box;
+  float: right;
+}
+
+#fieldLeft{
+  box-sizing: border-box;
+  float: left;
+}
+
+#blocLeft{
+  box-sizing: border-box;
+  float: left;
+}
+
+#blocRight{
+  box-sizing: border-box;
+  float: right;
+}
+
+#totalPrice{
+  color: red;
+  font-weight: bold;
+  border: double;
+  border-color: black;
+}
