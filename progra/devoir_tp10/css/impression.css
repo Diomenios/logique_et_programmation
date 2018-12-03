@@ -1,0 +1,95 @@
+body{
+  box-sizing: border-box;
+  width: 8cm;
+  min-height: auto;
+  border: none;
+  font-family: Arial, serif;
+  font-size: 11pt;
+}
+
+form{
+  background-color: whitesmoke;
+  display: none;
+}
+
+fieldset{
+  border: dotted;
+  border-width: thin;
+  margin: 5px;
+}
+
+fieldset > legend{
+  border: dotted;
+  border-width: thin;
+}
+
+th{
+  font-style: italic;
+}
+
+td{
+  box-sizing: border-box;
+  margin: 0px;
+  border: dashed;
+  border-width: thin;
+}
+
+tfoot > tr > td{
+  text-align: right;
+  border: none;
+}
+
+.bodyTable{
+  border: solid;
+  margin-bottom: 30px
+}
+
+.bodyTable tbody>tr>td:not(:first-child){
+  text-align: right;
+}
+
+.bodyTable tbody>tr>td:last-child{
+  color: black;
+  font-weight: bold;
+}
+
+.thTable{
+  font-style: italic;
+}
+
+.clear{
+  clear: both;
+}
+
+.grayBrackground{
+  margin: 0px;
+  padding: 10px;
+  border: solid;
+}
+
+
+#fieldRight{
+  box-sizing: border-box;
+  float: right;
+}
+
+#fieldLeft{
+  box-sizing: border-box;
+  float: left;
+}
+
+#blocLeft{
+  box-sizing: border-box;
+  float: left;
+  display: none;
+}
+
+#blocRight{
+}
+
+#totalPrice{
+  color: black;
+  font-weight: bold;
+  border: solid;
+  border-color: black;
+}

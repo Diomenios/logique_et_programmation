@@ -1,0 +1,73 @@
+<!DOCTYPE <html></html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/balance.css" type="text/css">
+    <link rel="stylesheet" href="css/impression.css" type="text/css" media="print">
+    <script src="js/balance.js"></script>
+    <script src="js/connectcode-javascript-code39.js">
+
+    </script>
+    <title> Balance</title>
+  </head>
+  <body onLoad="init();">
+  <div id="blocLeft" class="grayBrackground">
+    <form onSubmit="return ajouterElement();">
+      <fieldset>
+        <legend>pesez votre article</legend>
+        <label for="balanceInput">poids :   </label>
+        <input type="number" min="0.05" max="10" name="balanceInput" id="quantity" placeholder="de 50g à 10kg" step="0.01" required>
+      </fieldset>
+      <fieldset>
+        <legend>
+          sélectionnez l'article <br>
+        </legend>
+        <div id="fieldLeft">
+          <select id="listFruits" name="inputFruits" size="2" onclick="synchroSelect(this);">
+          </select>
+          <select id="listPrice" name="inputPrice" size="2" onclick="synchroSelect(this);">
+          </select>
+          <select id="listMode" name="inputMode" size="2" onclick="synchroSelect(this);">
+          </select>
+        </div>
+        <div id="fieldRight">
+          <p> <input type="submit" name="ajouter" value="Ajouter"> </p>
+          <p> <input type="button" name="enlever" value="Enlever" onclick="enleverElement();"> </p>
+          <p> <input type="button" name="imprimer" value="Imprimer" onclick="impression();"> </p>
+          <p> <input type="button" name="effacer" value="Effacer" onclick="eraseTable();"> </p>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div id="blocRight" class="grayBrackground">
+    <table class="bodyTable">
+      <thead>
+        <tr>
+          <th>articles</th>
+          <th>prix</th>
+          <th>qté(kg)</th>
+          <th>mode</th>
+          <th>total</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td id="totalPrice">0.00</td>
+        </tr>
+      </tfoot>
+      <caption>synthèse de votre achat</caption>
+    </table>
+    <div id="barcode">
+    </div>
+  </div>
+  <br class="clear">
+  </body>
+</html>
