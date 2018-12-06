@@ -1,0 +1,47 @@
+<!DOCTYPE  html>
+
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <title>Bibliothèque</title>
+    <script rsc="js/bibliotheque.js"></script>
+    <link href="css/bibliotheque.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h2>Catalogue de la bibliothèque</h2>
+    <div id="radioField">
+    Tri par :
+      <input type="radio" name="choice" value="r"> ref
+      <input type="radio" name="choice" value="a"> auteur
+      <input type="radio" name="choice" value="t"> titre
+    </div>
+    <div id="leftfield">
+      <table id="leftTable">
+        <thead>
+        <th> ref </th>
+        <th> auteur </th>
+        <th> titre </th>
+        </thead>
+        <tbody id="leftTBody">
+
+        </tbody>
+      </table> <br>
+      <textarea readonly>Salut mon pote</textarea>
+      <input type="button" value="Emprunter">
+    </div>
+    <div id="rightField">
+      <h2>Ouvrages actuellement en prêt</h2>
+      <table>
+        <thead id="rightTable">
+        <th> ref </th>
+        <th> auteur </th>
+        <th> titre </th>
+        </thead>
+        <tbody id="rightTBody">
+        </tbody>
+      </table><br>
+      <textarea readonly> Salut mon pote</textarea>
+      <input type="button" value="Rendre">
+    </div>
+  </body>
+</html>
