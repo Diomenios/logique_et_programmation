@@ -88,7 +88,7 @@ function setSelect(t) { // affiche les listes <select> à partir du tableau t
 }
     
 function choix(r){ // selon le choix via bouton-radio r, fabrique la liste demandée
-  setSelect((r.value == 'F') ? Object.keys(fruits) : Object.keys(legumes));
+  setSelect((r.value == 'F') ? (switchNumb = 0, Object.keys(fruits)) : ( switchNumb = 1, Object.keys(legumes)));
 }
 
 function synchro(s){ // synchronise les deux listes sur clic
