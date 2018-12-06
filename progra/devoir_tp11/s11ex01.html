@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<!-- ChL@015  YD@2016-->
+<html lang=fr>
+<head>
+  <meta charset=utf-8>
+  <title>semaine 11 exercice 03</title>
+  <link rel=stylesheet href=css\s11ex01.css>
+  <link rel=stylesheet media=print href=css\s11ex01p.css>
+  <!-- ===================================================== -->
+  <script src=js\utils.js></script>
+  <script src=js\s11ex01.js></script>
+  <script src=js\barcode39.js></script>
+</head>
+<!-- ========================================================================================= -->
+<body onLoad='initPage();'>
+  <!-- bloc de gauche -->
+  <div id=frm>
+    <form name=frm action=# onSubmit='return ajouter(this);' onReset='raz();'>
+      <fieldset>
+      <legend>pesez votre article</legend>
+        <p>
+          <label for=qte>poids : </label>
+          <input name=qte id=qte type=number min=0.05 max=10.0 step=0.01 required
+                 placeholder='entre 50g et 10kg'>
+        </p>         
+      </fieldset>
+      <fieldset>
+        <legend>sélectionnez l'article<br>
+          <div id=chx>
+            <input id=chxF type=radio name=typ value=F checked onChange='choix(this);'>
+			<label for=chxF>Fruits</label>
+            <input id=chxL type=radio name=typ value=L onChange='choix(this);'>
+			<label for=chxL>Légumes</label>
+          </div>
+        </legend>
+        <div id=articles>
+          <select id=listeGauche name=listeGauche required onclick='synchro(this);'>
+            <!-- à remplir avec des <option> -->
+          </select>
+          <select id=listeDroite name=listeDroite required onclick='synchro(this);'>
+            <!-- à remplir avec des <option> -->          
+          </select>
+        </div>
+        <div id=commande>      
+          <p>
+            <input type=submit value=Ajouter><br>
+            <input type=button value=Enlever onClick='enlever(this);'>
+          </p>
+          <p><input name=print disabled type=button value=Imprimer onClick='imprimer();'></p>
+          <p><input type=reset value='Effacer'></p>        
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <!-- bloc de droite -->  
+  <div id=com>
+    <table>
+      <caption>synthèse de votre achat</caption>
+      <thead>
+        <tr>
+          <th>article</th>
+          <th>prix</th>
+          <th>qté(kg)</th>
+          <th>total</th>
+        </tr>
+      </thead>
+      <tfoot id=tf>
+        <tr><td></td><td></td><td></td><td id=tot></td></tr>
+      </tfoot>
+      <tbody id=tb><!-- table à remplir --></tbody>
+    </table>
+    <div id=bar hidden></div> <!-- code-barres -->
+    <div id=dte hidden></div> <!-- date -->
+  </div>
+</body>
+</html>
