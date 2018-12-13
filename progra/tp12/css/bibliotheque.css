@@ -3,11 +3,68 @@ textarea{
 }
 
 body{
+  max-width: 700px;
 }
+
+section{
+  clear: both;
+}
+
+table{
+  padding: 2px;
+  border : double black;
+  width: 100%;
+}
+
+td{
+  padding: 2px;
+  border-bottom: dashed 1px;
+  border-right: dashed 1px;
+}
+
+th{
+  border-bottom:solid 1px;
+}
+
+textarea{
+  margin-right: 20px;
+  float: left;
+  height: 20px;
+}
+
+h3{
+  margin-left: 1%;
+}
+
+.inputButton{
+  float: right;
+  margin-top: 2px;
+}
+
 
 #radioField{
   background-color: #FFF48D;
   border:solid thin;
   width: content-box;
+  padding: 5px;
+  float: left;
+  margin: 1%;
 }
+
+#leftField{
+  box-sizing: border-box;
+  float: left;
+  width: 48%;
+  margin: 1%;
+}
+
+#rightField{
+  box-sizing: border-box;
+  float: right;
+  margin: 1%;
+  width: 48%;
+}
+
+
+
 
